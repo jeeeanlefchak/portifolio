@@ -1,0 +1,30 @@
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="title">{{ profile.name }}</h1>
+        <p class="subtitle">{{ profile.title }}</p>
+        <p class="bio">{{ profile.bio }}</p>
+        <div class="cta-buttons">
+          <button (click)="scrollToSection('experiencias')" class="btn btn-primary">Ver Experiências</button>
+          <a href="mailto:{{ profile.email }}" class="btn btn-secondary">Entrar em Contato</a>
+        </div>
+        <div class="contact-info">
+          <a [href]="getWhatsAppLink()" target="_blank" class="link">📱 {{ profile.phone }}</a>
+          <a href="mailto:{{ profile.email }}" class="link">📧 {{ profile.email }}</a>
+          <a href="{{ profile.linkedin }}" target="_blank" class="link">💼 LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="avatar">
+          <img src="assets/image.png" alt="Avatar" class="avatar-img" (error)="onImageError()" />
+          <span class="initial" *ngIf="!hasImage">J</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>↓ Scroll para explorar</span>
+  </div>
+</section>

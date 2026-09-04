@@ -1,0 +1,47 @@
+<section id="experiencias" class="experiences">
+  <div class="container">
+    <h2 class="section-title">Experiências Profissionais</h2>
+    <p class="section-subtitle">Minha trajetória no desenvolvimento de software</p>
+
+    <div class="experiences-content">
+      <div class="timeline">
+        <div *ngFor="let exp of experiences"
+             [class.active]="selectedExperience?.id === exp.id"
+             (click)="selectExperience(exp)"
+             class="timeline-item">
+          <div class="timeline-dot" [class.highlighted]="exp.highlighted"></div>
+          <div class="timeline-label">
+            <h3>{{ exp.company }}</h3>
+            <p class="position">{{ exp.position }}</p>
+            <p class="period">{{ exp.period }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-details" *ngIf="selectedExperience">
+        <div class="detail-header">
+          <h3>{{ selectedExperience.company }}</h3>
+          <p class="position">{{ selectedExperience.position }}</p>
+          <p class="location">📍 {{ selectedExperience.location }}</p>
+          <p class="period">📅 {{ selectedExperience.period }}</p>
+        </div>
+
+        <div class="description">
+          <h4>Responsabilidades</h4>
+          <ul>
+            <li *ngFor="let desc of selectedExperience.description">{{ desc }}</li>
+          </ul>
+        </div>
+
+        <div class="technologies">
+          <h4>Tecnologias</h4>
+          <div class="tech-tags">
+            <span *ngFor="let tech of selectedExperience.technologies" class="tech-tag">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="#home" class="logo">Jean Carlos Lefchak</a>
+      <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="navbar-menu" [class.active]="menuOpen">
+      <a href="#home" (click)="closeMenu()" class="nav-link">Início</a>
+      <a href="#experiencias" (click)="closeMenu()" class="nav-link">Experiências</a>
+      <a href="#skills" (click)="closeMenu()" class="nav-link">Habilidades</a>
+      <a href="#certificacoes" (click)="closeMenu()" class="nav-link">Certificações</a>
+      <a href="#contato" (click)="closeMenu()" class="nav-link cta">Contato</a>
+    </div>
+  </div>
+</nav>
