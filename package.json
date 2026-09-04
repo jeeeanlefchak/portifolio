@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production --base-href '/portifolio/'",
-    "deploy": "npm run build:prod && cp -r dist/portfolio/* ../docs/",
+    "copy:docs": "mkdir -p ../docs && rm -rf ../docs/* && cp -r dist/portfolio/browser/* ../docs/",
+    "deploy": "npm run build:prod && npm run copy:docs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
