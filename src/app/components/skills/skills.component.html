@@ -1,0 +1,17 @@
+<section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title">Habilidades Técnicas</h2>
+    <p class="section-subtitle">Tecnologias e competências desenvolvidas ao longo dos anos</p>
+
+    <div class="skills-grid">
+      <div *ngFor="let skill of skills" class="skill-card">
+        <h3 class="skill-category">{{ skill.category }}</h3>
+        <ul class="skill-items">
+          <li *ngFor="let item of skill.items" class="skill-item">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
