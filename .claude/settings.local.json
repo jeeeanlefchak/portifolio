@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ng new *)",
+      "Bash(ng generate *)",
+      "Bash(ng serve *)",
+      "Bash(curl -s http://localhost:4200)",
+      "Bash(npm start *)",
+      "Bash(mkdir -p /p/Portifolio/docs)",
+      "Bash(npm run *)",
+      "Bash(ng build *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)"
+    ]
+  }
+}
