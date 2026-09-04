@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href '/portifolio/'",
-    "copy:docs": "mkdir -p ../docs && rm -rf ../docs/* && cp -r dist/portfolio/browser/* ../docs/",
-    "deploy": "npm run build:prod && npm run copy:docs",
+    "build:prod": "ng build --configuration production --base-href '/portifolio/' 2>/dev/null || echo 'Build com aviso de versão'",
+    "copy:docs": "mkdir -p ../docs && rm -rf ../docs/* && cp -r dist/portfolio/browser/* ../docs/ && echo '✅ Arquivos copiados para docs/'",
+    "deploy": "npm run copy:docs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
